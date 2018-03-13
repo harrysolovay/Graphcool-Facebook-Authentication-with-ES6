@@ -1,7 +1,7 @@
 # Graphcool-Facebook-Authentication-with-ES6
 Compilation of Graphcool resolvers (written with ES6 and async/await) - minimal Facebook authentication flow (no error handling)
 
-Open the master directory in your terminal and run "gulp" – this will make sure that any changes in server/src will be recognized and acted upon (JavaScript will be transpiled into build, and other files will be duplicated in build).
+Open the root directory in your terminal and run "gulp" – this will make sure that any changes in server/src will be recognized and acted upon (JavaScript will be transpiled into build, and other files will be duplicated into build).
 
 To use the Graphcool CLI, CD into server – I had to break this up into to packages:
   1) the gulp environment
