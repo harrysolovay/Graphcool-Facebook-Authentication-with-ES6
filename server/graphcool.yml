@@ -1,0 +1,23 @@
+
+
+types: ./types.graphql
+
+
+functions:
+
+  authentication:
+    handler:
+      code:
+        src: ./build/authentication/authenticate.js
+    type: resolver
+    schema: ./build/authentication/authenticate.graphql
+
+
+# https://docs-next.graph.cool/reference/auth/authorization/overview-iegoo0heez
+permissions:
+- operation: "*"
+
+
+# https://docs-next.graph.cool/reference/auth/authentication/authentication-tokens-eip7ahqu5o
+rootTokens:
+- mytoken

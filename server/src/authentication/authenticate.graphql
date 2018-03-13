@@ -1,0 +1,7 @@
+type AuthenticatePayload {
+  authToken: String!
+}
+
+extend type Mutation {
+  authenticate(facebookToken: String!): AuthenticatePayload
+}

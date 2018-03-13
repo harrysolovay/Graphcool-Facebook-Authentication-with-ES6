@@ -1,0 +1,48 @@
+
+
+
+type User @model {
+
+  id: ID! @isUnique
+
+  createdAt: DateTime!
+  updatedAt: DateTime!
+
+  facebookId: String @isUnique
+
+  posts: [Post!]! @relation(name: "UserPosts")
+  comments: [Comment!]! @relation(name: "UserComments")
+
+}
+
+
+
+type Post @model {
+
+  id: ID! @isUnique
+
+  createdAt: DateTime!
+  updatedAt: DateTime!
+
+  body: String
+  caption: String
+
+  author: User! @relation(name: "UserPosts")
+  comments: [Comment!]! @relation(name: "PostComments")
+
+}
+
+
+type Comment @model {
+
+  id: ID! @isUnique
+
+  createdAt: DateTime!
+  updatedAt: DateTime!
+
+  body: String!
+
+  author: User! @relation(name: "UserComments")
+  post: Post! @relation(name: "PostComments")
+
+}
