@@ -9,6 +9,6 @@ This project is broken up into two packages:
   1) the gulp environment (Graphcool-Facebook-Authentication-with-ES6-master)
   2) Graphcool server (Graphcool-Facebook-Authentication-with-ES6-master/server)
 
-I had to do this because Graphcool uploads the entire node_modules folder upon every deployment, which takes very long and can seriously impact development time. By having a separate package for gulp and ES6-transpiling processes, I made sure that Graphcool server-specific code is all that gets uploaded (uploads only the transpiled code and, in this case, a single module, "graphcool-lib").
+I had to do this because Graphcool uploads the entire node_modules folder upon every deployment, which takes very long and can seriously impact development time. By having a separate package for gulp and ES6-transpiling processes, I made sure that Graphcool server-specific code is all that gets uploaded by the Graphcool CLI (uploads only the transpiled code and, in this case, a single module, "graphcool-lib").
 
 Please let me know if you have any questions. I hope this setup works for you as well as it did for me.
